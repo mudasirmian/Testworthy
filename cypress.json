@@ -1,0 +1,16 @@
+{
+    "responseTimeout": 10000,
+    "baseUrl": "https://testworthy.us",
+    "video":false,
+    "viewportWidth": 1200,
+    "viewportHeight": 850,
+    "reporter": "mochawesome",
+    "reportOptions":
+    {
+        "overwrite": true,
+        "reportFilename": "TW-Smoke-List-Report",
+        "autoOpen": true,
+        "charts": true
+    }
+
+}

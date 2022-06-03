@@ -1,0 +1,13 @@
+{
+  "email": "mudasir.raza@10pearls.com",
+  "password": "Testing@100",
+  "Suite_Name": "Smoke Check",
+  "Suite_Description": "Smoke Check List",
+  "Section_Name": "Smoke Cases",
+  "Section_Description": "Description check in Add Section",
+  "Tittle": "Smoke Test Case 1",
+  "PreCondition": "PreCondition check",
+  "Steps": "Test Case step check",
+  "ExpectedResult": "Expected Result Check",
+  "body": "Fixtures are a great way to mock data for responses to routes"
+}

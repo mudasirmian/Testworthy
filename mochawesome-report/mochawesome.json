@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-19T09:54:56.018Z",
+    "end": "2022-05-19T09:56:17.215Z",
+    "duration": 81197,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e43eeb3-c5d5-459c-bce7-ad4cd3491f1c",
+      "title": "",
+      "fullFile": "cypress/integration/1-getting-started/TW_login.js",
+      "file": "cypress/integration/1-getting-started/TW_login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3bffa331-c8f7-4cfa-9b43-bb07a067e00a",
+          "title": "Login Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Login Suite Login",
+              "timedOut": null,
+              "duration": 77112,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('My Dashboard').should('exist');\ncy.get('label > span > a').should('contain', 'My Dashboard');\ncy.get('#txtHeaderUserName').should('contain', 'Mudasir Raza');",
+              "err": {},
+              "uuid": "8c540cb3-89d0-4afb-927d-45ad1f81c5b3",
+              "parentUUID": "3bffa331-c8f7-4cfa-9b43-bb07a067e00a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8c540cb3-89d0-4afb-927d-45ad1f81c5b3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 77112,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
