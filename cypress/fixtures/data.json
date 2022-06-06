@@ -1,6 +1,6 @@
 {
   "email": "mudasir.raza@10pearls.com",
-  "password": "password",
+  "password": "Testing@100",
   "Suite_Name": "Smoke Check",
   "Suite_Description": "Smoke Check List",
   "Section_Name": "Smoke Cases",
@@ -9,5 +9,7 @@
   "PreCondition": "PreCondition check",
   "Steps": "Test Case step check",
   "ExpectedResult": "Expected Result Check",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "TestPlan_Name": "TestPlan-1",
+  "TestPlan_Description": "Running Smoke test for Test Plan"
 }

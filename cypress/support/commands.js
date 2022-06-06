@@ -57,8 +57,23 @@ Cypress.Commands.add('AddCases', (Tittle)=>
     cy.get('#btnUpdateCase').should('be.visible').click() // submit btn
     cy.get('.breadCrumb > :nth-child(3)').should('be.visible').click({force: true})  // redirect back to test case screen
     // cy.get('.case-title').should('be.visible')
-    cy.get('.breadCrumb').should('contain', Tittle)
+    // cy.get('.breadCrumb').should('contain', Tittle)
   
+})
+
+Cypress.Commands.add('TestPlan', (TestPlan_Name, TestPlan_Description, Suite_Name)=> 
+{
+    cy.get('.header-nav').find('li').eq(3).click() // Click on Test Plan Tab
+    cy.url().should('include', 'TestPlan')
+    cy.get('#btnTestPlan').click() // Click on TestPlan Button
+    cy.get('#Name').click().type(TestPlan_Name) // Type Plan Name 
+    cy.get('#Description').type(TestPlan_Description) // Type Plan Desc
+    cy.get('#btnAddRunAndSelectSuite').click() // click on add Suite 
+    cy.get('#runSuiteId').select('2441').should('have.value', '2441') // Select suite from dropdown
+    cy.get('#btnAddRuns').click()
+    cy.get('.suites').should('contain', Suite_Name) // Verify added test plan
+    cy.get('#btnAddEditPlan').click() // click on save test plan 
+    cy.get('#btnCloseCrossAdd > .close_cross').click() // Close confirmation popup 
 })
 
 
