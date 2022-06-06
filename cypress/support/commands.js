@@ -6,6 +6,7 @@ Cypress.Commands.add('login', (email,password)=>
     cy.get("#Email").clear().type(email)
     cy.get("#Password").clear().type(password)
     cy.get("#btnLogin").click()
+    cy.url().should('include', 'Dashboard')
 })
 
 Cypress.Commands.add('Logout', ()=> 
