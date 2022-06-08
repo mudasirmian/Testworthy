@@ -2,10 +2,10 @@ Cypress.Commands.add('login', (email,password)=>
 {
     cy.get('#navbar').find('li').eq(4).click()      
     cy.get(':nth-child(6) > .nav-link').click()
-    cy.url().should('eq', 'https://testworthy.us/Login')
     cy.get("#Email").clear().type(email)
     cy.get("#Password").clear().type(password)
     cy.get("#btnLogin").click()
+    cy.wait(300)
     cy.url().should('include', 'Dashboard')
 })
 
@@ -66,7 +66,7 @@ Cypress.Commands.add('TestPlan', (TestPlan_Name, TestPlan_Description, Suite_Nam
 {
     cy.get('.header-nav').find('li').eq(3).click() // Click on Test Plan Tab
     cy.url().should('include', 'TestPlan')
-    cy.get('#btnTestPlan').click() // Click on TestPlan Button
+    cy.get('#btnTestPlan').click({force: true}) // Click on TestPlan Button
     cy.get('#Name').click().type(TestPlan_Name) // Type Plan Name 
     cy.get('#Description').type(TestPlan_Description) // Type Plan Desc
     cy.get('#btnAddRunAndSelectSuite').click() // click on add Suite 
