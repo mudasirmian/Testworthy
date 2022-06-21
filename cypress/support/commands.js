@@ -1,3 +1,5 @@
+
+
 Cypress.Commands.add('login', (email,password)=> 
 {
     cy.get('#navbar').find('li').eq(4).click()      
@@ -5,7 +7,7 @@ Cypress.Commands.add('login', (email,password)=>
     cy.get("#Email").clear().type(email)
     cy.get("#Password").clear().type(password)
     cy.get("#btnLogin").click()
-    cy.wait(300)
+    // cy.wait(100)
     cy.url().should('include', 'Dashboard')
 })
 
@@ -77,4 +79,17 @@ Cypress.Commands.add('TestPlan', (TestPlan_Name, TestPlan_Description, Suite_Nam
     cy.get('#btnCloseCrossAdd > .close_cross').click() // Close confirmation popup 
 })
 
+Cypress.Commands.add('Milestone', function(Milestone_Name,Description, Start_date, End_date){
 
+    cy.wait(100)
+    cy.get('.header-nav').find('li').eq(1).click() // Click on Milestone Tab
+    cy.url().should('include', 'Milestone')
+    cy.get('#lnkCurrentEditMilestone_0').click({force: true}) //  Click on Add Milestone
+    cy.get('#Name').type(Milestone_Name, {force: true}) // Milestone Name
+    cy.get('#Description').type(Description)
+    cy.get('#dpStartDate').type(Start_date) // Add start date 
+    cy.get('#dpEndDate').type(End_date) // End date
+    cy.get("#btnAddEditMilestone").should('be.visible').click() // Submit button
+   
+   
+})
