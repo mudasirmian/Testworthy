@@ -26,3 +26,9 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   })
 
   import "cypress-real-events/support";
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}

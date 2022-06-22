@@ -12,6 +12,7 @@
         "autoOpen": true,
         "charts": true
     },
-    "parseSpecialCharSequences": false
+    "parseSpecialCharSequences": false,
+    "testFiles": "**/*.feature"
 
 }
