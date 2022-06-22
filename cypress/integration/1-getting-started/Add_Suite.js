@@ -12,7 +12,9 @@ describe('Add_Suite', function(){
     it('Add Suite', function (){
 
         cy.Project_OverView() 
-        cy.AddSuite(this.data.Suite_Name, this.data.Suite_Description) 
+        cy.AddSuite(this.data.Suite_Name, this.data.Suite_Description)
+              
+               
     })
 
     it('AddCases-Section', function(){
@@ -21,10 +23,14 @@ describe('Add_Suite', function(){
 
     })
 
-    it.only('Add Case', function(){
+    it('Add Case', function(){
         cy.Project_OverView() 
         cy.AddCases(this.data.Tittle)
     })
+
+    // afterEach(() => {
+    //     cy.Logout()
+    //   })
 })
 
 

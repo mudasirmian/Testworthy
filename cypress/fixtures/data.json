@@ -11,5 +11,12 @@
   "ExpectedResult": "Expected Result Check",
   "body": "Fixtures are a great way to mock data for responses to routes",
   "TestPlan_Name": "TestPlan-1",
-  "TestPlan_Description": "Running Smoke test for Test Plan"
+  "TestPlan_Description": "Running Smoke test for Test Plan",
+  "Milestone_Name": "Milestone1",
+  "Description": "Milestone automating",
+  "Start_date": "1999-12-31",
+  "End_date": "2022-12-31",
+  "Sub_Milestone_Name": "Sub-Milestone 2",
+  "SubMilestoneDescription": "Sub_Milestone automating"
+
 }

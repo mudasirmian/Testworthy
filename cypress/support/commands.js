@@ -13,9 +13,10 @@ Cypress.Commands.add('login', (email,password)=>
 
 Cypress.Commands.add('Logout', ()=> 
 {
-    cy.get('#dropdownMenuLinkMainHeader').click()
-    cy.contains('Log Out').should('be.visible').click()
+    cy.get('#dropdownMenuLinkMainHeader').click({force: true})
+    cy.get('div.caret-down > div > div > a:nth-child(2)').click({force: true})
     cy.get('#frmLogout').click()
+    
 })
 
 Cypress.Commands.add('Project_OverView', ()=> 
@@ -38,7 +39,7 @@ Cypress.Commands.add('AddSuite', (Suite_Name,Suite_Description)=>
 Cypress.Commands.add('AddSection', (Section_Name,Section_Description)=> 
 {
     cy.get('.header-nav').find('li').eq('2').click() // Test suites and cases TAB
-    cy.get('.text >a').click({force:true})  // Open Suite 
+    cy.contains('Smoke Test Suite').click({force:true})  // Open Suite 
     cy.wait(2000)
     cy.contains('Add Section').click({force:true}) // Open add section modal  
     cy.get('#tbNameAddSection').click({force:true}).clear().type(Section_Name) // Section name
@@ -50,7 +51,7 @@ Cypress.Commands.add('AddSection', (Section_Name,Section_Description)=>
 Cypress.Commands.add('AddCases', (Tittle)=> 
 {
     cy.get('.header-nav').find('li').eq('2').click() // Test suites and cases TAB
-    cy.get('.text >a').click({force:true}) // Open Suite 
+    cy.contains('Smoke Test Suite').click({force:true}) // Open Suite 
     cy.wait(2000)
     cy.contains('Add Test Case').click({force:true}) // Open add test case modal
     cy.get('#Title').click({force:true}).clear().type(Tittle) // Add Tittle 

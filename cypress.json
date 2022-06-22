@@ -11,6 +11,7 @@
         "reportFilename": "TW-Smoke-List-Report",
         "autoOpen": true,
         "charts": true
-    }
+    },
+    "parseSpecialCharSequences": false
 
 }
